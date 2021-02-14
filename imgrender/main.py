@@ -1,12 +1,12 @@
-from colors import color
-from PIL import Image
+from colr import color
+from pil import Image
 import numpy as np
 import argparse
 
 class Renderer():
 
     def get_pixel(self, col):
-        return color('  ', bg=f'rgb({int(col[0])}, {int(col[1])}, {int(col[2])})')
+        return color('  ', back=(int(col[0]), int(col[1]), int(col[2])))
 
     def render_image(self, pixels, scale):
         # first of all scale the image to the scale 'tuple'
